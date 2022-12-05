@@ -17,7 +17,8 @@
 <table class="table table-striped" id="customers" style="width:100%">
     <tr>
         <th>Имя</th>
-        <th>Фамлия</th>
+        <th>Фамилия</th>
+        <th>Отчество</th>
         <th>Возраст</th>
         <th>Пол</th>
         <th>Документ</th>
@@ -26,6 +27,7 @@
     <tr>
         <td>Игорь</td>
         <td>Чистилов</td>
+        <td></td>
         <td>50</td>
         <td>М</td>
         <td>Паспорт РФ</td>
@@ -34,6 +36,7 @@
     <tr>
         <td>Марина</td>
         <td>Доброделова</td>
+        <td></td>
         <td>9</td>
         <td>Ж</td>
         <td>Свидетельство о рождении</td>
@@ -42,6 +45,7 @@
     <tr>
         <td>Олег</td>
         <td>Златоруков</td>
+        <td></td>
         <td>80</td>
         <td>-</td>
         <td>Паспорт РФ</td>
@@ -49,10 +53,10 @@
     </tr>
 </table>
 <div id="filed-form">
-    <label>Имя</label>
+    <label>*Имя</label>
     <input class="reg-form" id="fisrt_name" type="text" onclick="BrowserDetect()" maxlength="10">
     <p></p>
-    <label>Фамилия</label>
+    <label id="last">*Фамилия</label>
     <input class="reg-form" id="last_name" type="text" maxlength="10" onclick="BrowserDetect()">
     <p></p>
     <label>Отчество</label>
@@ -65,7 +69,7 @@
     <input class="reg-form" type="email">
     <p></p>
     <label>Пароль</label>
-    <input class="reg-form" maxlength="5" title="Пароль" type="password" onclick="BrowserDetect()">
+    <input required class="reg-form" id="password" maxlength="5" title="Пароль" type="password" onclick="BrowserDetect()">
     <p></p>
     <label>Пол</label>
     <select id="sex" multiple="multiple" >
@@ -78,7 +82,7 @@
     <select class="trick" id="doc">
         <option>Паспорт РФ</option>
         <option>Свидетельство о рождении РФ</option>
-        <option>Военный билет</option>
+        <option>Военый билет</option>
         <option>Загранпаспорт РФ</option>
         <option>Мультипаспорт</option>
         <option>Паспорт РФ</option>
@@ -86,6 +90,7 @@
     <p></p>
     <button class="btn btn-primary" onclick="addNew()">Добавить</button>
 </div>
+
 <script src="../js/registry.js"></script>
 <script src="../js/login.js"></script>
 </body>
