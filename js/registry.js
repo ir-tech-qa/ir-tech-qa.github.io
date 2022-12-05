@@ -3,16 +3,33 @@
             throwError();
             return;
         }
+        if(!document.getElementById("last_name").value) {
+            document.getElementById("last").className = "rederror";
+            return;
+        }else{
+            document.getElementById("last").className = "";
+        }
+        if(!document.getElementById("password").value) {
+            alert("Поле пароль обязательное для заполненя")
+            return;
+        }
+        if(document.getElementById("doc").value === "Мультипаспорт") {
+            return;
+        }
         var table = document.getElementById("customers");
         var row = table.insertRow(1);
-        var lastName = row.insertCell(0);
-        var firstName = row.insertCell(1);
-        var age = row.insertCell(2);
-        var sex = row.insertCell(3);
-        var doc = row.insertCell(4);
-        var stat = row.insertCell(5)
-        lastName.innerHTML = document.getElementById("last_name").value;
+        var firstName = row.insertCell(0);
+        var lastName = row.insertCell(1);
+        var thirdName = row.insertCell(2);
+        var age = row.insertCell(3);
+        var sex = row.insertCell(4);
+        var doc = row.insertCell(5);
+        var stat = row.insertCell(6)
         firstName.innerHTML = document.getElementById("fisrt_name").value;
+        lastName.innerHTML = document.getElementById("last_name").value;
+        if (!thirdName.innerHTML) {
+            thirdName.innerHTML = "Не указано";
+        }
         age.innerHTML = document.getElementById("age").value;
         doc.innerHTML = document.getElementById("doc").value;
         sex.innerHTML = getAllVal();
