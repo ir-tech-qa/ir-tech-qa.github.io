@@ -27,10 +27,11 @@
         var stat = row.insertCell(6)
         firstName.innerHTML = document.getElementById("fisrt_name").value;
         lastName.innerHTML = document.getElementById("last_name").value;
-	thirdName.innerHTML = "";
         if (!thirdName.innerHTML) {
             thirdName.innerHTML = "Не указано";
-        }
+        } else {
+	    thirdName.innerHTML = "";
+	}
         age.innerHTML = document.getElementById("age").value;
         doc.innerHTML = document.getElementById("doc").value;
         sex.innerHTML = getAllVal();
