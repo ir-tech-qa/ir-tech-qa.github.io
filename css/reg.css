@@ -49,3 +49,7 @@ input{
 #sex{
   margin-top: 10px;
 }
+
+.rederror {
+  color: tomato;
+}
