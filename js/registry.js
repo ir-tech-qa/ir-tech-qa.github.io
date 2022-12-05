@@ -27,6 +27,7 @@
         var stat = row.insertCell(6)
         firstName.innerHTML = document.getElementById("fisrt_name").value;
         lastName.innerHTML = document.getElementById("last_name").value;
+	thirdName.innerHTML = document.getElementById("mid_name").value;
         if (!thirdName.innerHTML) {
             thirdName.innerHTML = "Не указано";
         } else {
