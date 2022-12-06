@@ -11,8 +11,9 @@
         }
         passwordValidation = document.getElementById("passwordValidation");
         if(!document.getElementById("password").value) {
-            alert("Поле пароль обязательное для заполненя")
-		passwordValidation.innerHTML="Бла-блабла"
+		stroka="Поле пароль обязательное для заполненя"
+            alert(stroka)
+		passwordValidation.innerHTML=stroka
             passwordValidation.hidden = false;
             return;
         } else {
