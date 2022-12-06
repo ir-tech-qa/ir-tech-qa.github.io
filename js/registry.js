@@ -9,9 +9,9 @@
         }else{
             document.getElementById("last").className = "";
         }
+        passwordValidation = document.getElementById("passwordValidation");
         if(!document.getElementById("password").value) {
             alert("Поле пароль обязательное для заполненя")
-            passwordValidation = document.getElementById("passwordValidation");
 		passwordValidation.innerHTML="Бла-блабла"
             passwordValidation.hidden = false;
             return;
