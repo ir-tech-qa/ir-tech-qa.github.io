@@ -12,12 +12,13 @@
         if(!document.getElementById("password").value) {
             alert("Поле пароль обязательное для заполненя")
             passwordValidation = document.getElementById("passwordValidation");
-		passwordValidation.text="Бла-блабла"
-            //passwordValidation.hidden = false;
+		passwordValidation.innerHTML="Бла-блабла"
+            passwordValidation.hidden = false;
             return;
         } else {
-		passwordValidation.text=""
-            //passwordValidation.hidden = true;
+		passwordValidation.innerHTML=""
+		passwordValidation.hidden = false;
+		//passwordValidation.hidden = true;
         }
         if(document.getElementById("doc").value === "Мультипаспорт") {
             return;
