@@ -11,7 +11,11 @@
         }
         if(!document.getElementById("password").value) {
             alert("Поле пароль обязательное для заполненя")
+            passwordValidation = document.getElementById("passwordValidation");
+            passwordValidation.hidden = false;
             return;
+        } else {
+            passwordValidation.hidden = true;
         }
         if(document.getElementById("doc").value === "Мультипаспорт") {
             return;
@@ -27,12 +31,12 @@
         var stat = row.insertCell(6)
         firstName.innerHTML = document.getElementById("fisrt_name").value;
         lastName.innerHTML = document.getElementById("last_name").value;
-	thirdName.innerHTML = document.getElementById("mid_name").value;
+        thirdName.innerHTML = document.getElementById("third_name").value;
         if (!thirdName.innerHTML) {
             thirdName.innerHTML = "Не указано";
         } else {
-	    thirdName.innerHTML = "";
-	}
+            thirdName.innerHTML = "";
+        }
         age.innerHTML = document.getElementById("age").value;
         doc.innerHTML = document.getElementById("doc").value;
         sex.innerHTML = getAllVal();
