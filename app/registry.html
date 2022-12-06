@@ -57,10 +57,10 @@
     <input class="reg-form" id="fisrt_name" type="text" onclick="BrowserDetect()" maxlength="10">
     <p></p>
     <label id="last">*Фамилия</label>
-    <input class="reg-form" id="last_name" type="text" maxlength="10" onclick="BrowserDetect()">
+    <input class="reg-form" id="last_name" type="text" maxlength="10" onclick="BrowserDetect()">        
     <p></p>
     <label>Отчество</label>
-    <input class="reg-form" id="mid_name" type="text" maxlength="10">
+    <input class="reg-form" id="third_name" type="text" maxlength="10">
     <p></p>
     <label>Возраст</label>
     <input class="reg-form" id="age" type="number" onclick="BrowserDetect()">
@@ -70,7 +70,9 @@
     <p></p>
     <label>Пароль</label>
     <input required class="reg-form" id="password" maxlength="5" title="Пароль" type="password" onclick="BrowserDetect()">
-    <p></p>
+    <p style="color: red" id="passwordValidation" hidden>Поле пароль обязательное для заполненя</p>
+    <br />
+    <hr>
     <label>Пол</label>
     <select id="sex" multiple="multiple" >
     <option value="Н">Не указан</option>
